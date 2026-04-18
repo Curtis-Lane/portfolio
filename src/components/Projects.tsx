@@ -53,7 +53,7 @@ const PROJECTS = [
 	},
 ]
 
-function StatusBadge({ status, accent }: { status: string; accent: string }) {
+function StatusBadge({ status }: { status: string; }) {
 	const released = status === 'Released'
 	const color = released ? '#00ff88' : '#f59e0b'
 	return (
@@ -153,7 +153,7 @@ export default function Projects() {
 										right: '0.75rem',
 									}}
 								>
-									<StatusBadge status={project.status} accent={project.accent} />
+									<StatusBadge status={project.status} />
 								</div>
 								<div
 									style={{
