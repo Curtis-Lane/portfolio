@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Curtis Lane's Portfolio</title>
+		<script>
+			// Redirect all 404s back to index.html with the path preserved as a query
+			// param, so React Router can handle client-side routing on GitHub Pages.
+			// Technique: https://github.com/rafgraph/spa-github-pages
+			var l = window.location;
+			l.replace(
+				l.protocol + '//' + l.host +
+				l.pathname.split('/').slice(0, 2).join('/') + '/?/' +
+				l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') +
+				(l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+				l.hash
+			);
+		</script>
+	</head>
+	<body></body>
+</html>

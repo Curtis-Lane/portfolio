@@ -56,6 +56,9 @@ export default function About() {
 							<a href="#projects" className="btn-primary">
 								My Projects
 							</a>
+							<a href="/portfolio/resume" className="btn-secondary">
+								Resume
+							</a>
 						</div>
 					</div>
 
